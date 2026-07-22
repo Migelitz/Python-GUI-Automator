@@ -3,7 +3,8 @@
 > A multithreaded desktop automation utility built with Python and Tkinter. Features customizable execution intervals, a responsive GUI, and PyAutoGUI failsafe interrupts.
 
 ## 🎥 Demo
-*(Note: A GIF demonstration of the application in action will be added here shortly!)*
+
+https://github.com/user-attachments/assets/006fcd22-8580-4112-ba93-489998aeb860
 
 ---
 
@@ -28,7 +29,7 @@ Make sure you have Python installed on your machine. You will also need to insta
 ### Installation & Execution
 1. Clone the repository:
 ```bash
-   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
 ```
 
 2. Navigate into the project directory:
