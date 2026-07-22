@@ -54,4 +54,4 @@ python text_spam.py
 
 **Chyrus Miguel Macalla**
 
-* GitHub: [@Migelitoz](https://github.com/Migelitoz)
+* GitHub: [@Migelitz](https://github.com/Migelitz)
