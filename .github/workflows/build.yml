@@ -1,0 +1,48 @@
+name: Build with Nuitka
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+            flags: "--windows-console-mode=disable"
+            artifact_name: TextSpam-Windows
+            output_name: TextSpam-Windows.exe
+
+          - os: ubuntu-latest
+            flags: ""
+            artifact_name: TextSpam-Linux
+            output_name: TextSpam-Linux
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Compile with Nuitka
+        run: >
+          python -m nuitka
+          --onefile
+          ${{ matrix.flags }}
+          --output-filename="${{ matrix.output_name }}"
+          --assume-yes-for-downloads
+          main.py
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.output_name }}
+          path: ${{ matrix.output_name }}
