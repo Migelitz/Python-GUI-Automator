@@ -46,10 +46,14 @@ def main():
         return False
     vcmd = (root.register(validate_numbers), '%P')
 
-    # UI Widgets
-    label_welcome = tk.Label(root, text="GUI Text Automation Utility", font=("Arial", 12, "bold"))
-    label_welcome.grid(row=0, column=0, columnspan=2, pady=10)
+    header_frame = tk.Frame(root)
+    header_frame.grid(row=0, column=0, columnspan=2, pady=10)
 
+    label_welcome = tk.Label(header_frame, text="GUI Text Automation Utility", font=("Arial", 14, "bold"))
+    label_welcome.pack(side="left")
+
+    creator_label = tk.Label(header_frame, text="by Migelitz", font=("Arial", 10, "italic"))
+    creator_label.pack(side="left", padx=(10, 0))
     label_text = tk.Label(root, text="Enter the phrase to automate:")
     label_text.grid(row=1, column=0, padx=10, pady=5, sticky="e")
 
