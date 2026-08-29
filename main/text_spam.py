@@ -20,7 +20,7 @@ def start_spamming(phrase_entry, amount_entry, status_label, speed_entry):
     status_label.config(text="Status: Starting in 5s... Prepare target!", fg="blue")
     time.sleep(5) 
     
-    status_label.config(text="Status: Automating... (Slam mouse to top-left to STOP)", fg="red")
+    status_label.config(text="Status: Automating... (Slam mouse to top-right to STOP)", fg="red")
 
     try:
         for i in range(amount):
